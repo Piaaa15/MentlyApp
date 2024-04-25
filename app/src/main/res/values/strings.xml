@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PROJECT_MENTLY</string>
+    <string name="mently">
+        MENTLY
+    </string>
+    <string name="copyright_c">
+        Copyright (C) 2024 by Piaa
+    </string>
+</resources>
