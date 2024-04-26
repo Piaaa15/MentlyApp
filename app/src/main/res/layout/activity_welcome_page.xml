@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/gambar_orang"
-        android:layout_width="359dp"
+        android:layout_width="320dp"
         android:layout_height="279dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,24 +66,24 @@
 
     <Button
         android:id="@+id/btn_pasien"
-        android:layout_width="355dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:text="Masuk Sebagai Pasien"
-        android:fontFamily="@font/poppins_bold"
         android:background="@drawable/button_masuk1"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Masuk Sebagai Pasien"
+        android:textAllCaps="false"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
-        android:textSize="13sp"
-        android:textAllCaps="false"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.492" />
 
     <Button
         android:id="@+id/btn_admin"
-        android:layout_width="355dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:background="@drawable/btn_daftar1"
         android:fontFamily="@font/poppins_bold"
@@ -93,10 +93,10 @@
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.820" />
+        app:layout_constraintVertical_bias="0.832" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

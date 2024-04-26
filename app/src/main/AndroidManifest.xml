@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".DaftarPasien"
+            android:exported="false" />
+        <activity
             android:name=".LoginAdmin"
             android:exported="false" />
         <activity
