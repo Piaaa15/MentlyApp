@@ -19,6 +19,13 @@ public class WelcomePage extends AppCompatActivity {
 
         btnAdmin = findViewById(R.id.btn_admin);
         btnPasien = findViewById(R.id.btn_pasien);
+        btnAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), LoginAdmin.class);
+                startActivity(i);
+            }
+        });
         btnPasien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

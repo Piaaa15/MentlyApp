@@ -18,7 +18,7 @@
         android:fontFamily="@font/poppins_light"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="-5sp"
-        android:text="Copyright (C) 2024 by Piaa"
+        android:text="Copyright (C) 2024 by PAD"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
