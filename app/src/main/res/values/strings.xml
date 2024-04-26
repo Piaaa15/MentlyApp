@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">PROJECT_MENTLY</string>
+    <string name="app_name">MENTLY</string>
     <string name="mently">
         MENTLY
     </string>
     <string name="copyright_c">
         Copyright (C) 2024 by Piaa
+    </string>
+    <string name="lupa_sandi">
+        <u>Lupa Kata Sandi</u>
     </string>
 </resources>
