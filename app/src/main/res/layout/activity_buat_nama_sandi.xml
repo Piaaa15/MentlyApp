@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuatNamaSandi"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/nomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="2/2"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/txt_BuatNamaSandi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Buat Nama Pengguna Kata Sandi "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <ImageView
+        android:id="@+id/btn_back1"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_back" />
+
+    <Button
+        android:id="@+id/btn_Daftar2"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/btn_daftar1"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_BuatKataSandi"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <TextView
+        android:id="@+id/txtNamaP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Nama Pengguna"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/form_input"
+        android:ems="10"
+        android:hint="buat nama pangguna"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/biru_2"
+        android:textColorHint="#804094A7"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNamaP"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Kata Sandi"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <EditText
+        android:id="@+id/et_BuatKataSandi"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="116dp"
+        android:background="@drawable/form_input"
+        android:ems="10"
+        android:hint="buat kata sandi"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/biru_2"
+        android:textColorHint="#804094A7"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
