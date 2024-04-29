@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuatNamaSandi"
+    tools:context=".BuatNama"
     android:background="@color/white">
 
     <TextView
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <TextView
-        android:id="@+id/txt_BuatNamaSandi"
+        android:id="@+id/txt_BuatNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
