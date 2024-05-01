@@ -10,6 +10,14 @@
         <u>Lupa Kata Sandi</u>
     </string>
     <string name="hey_pia">
-        Hey Fadiyah,\nAtasi Masalah Mental Anda!
+        Atasi Masalah Mental Anda!
     </string>
+    <string name="buat_nama">
+        Buat Nama Pengguna &amp; Kata Sandi
+    </string>
+    <string name="lihat">
+        <u>Lihat Semua</u>
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

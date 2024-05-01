@@ -21,6 +21,8 @@ public class LoginPasien extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_pasien);
 
+        btnMasuk = findViewById(R.id.btn_masuk1);
+
         btnBack = findViewById(R.id.btn_back1);
         btnDaftar = findViewById(R.id.btn_daftar1);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +36,14 @@ public class LoginPasien extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), DaftarPasien.class);
+                startActivity(i);
+            }
+        });
+
+        btnMasuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), HomepagePengguna.class);
                 startActivity(i);
             }
         });
