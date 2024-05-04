@@ -172,7 +172,7 @@
                 <GridView
                     android:id="@+id/grid_home"
                     android:layout_width="363dp"
-                    android:layout_height="441dp"
+                    android:layout_height="560dp"
                     android:numColumns="2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -17,21 +17,21 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="18dp"
         android:background="@drawable/kotak_pink_home" />
-
 
 
     <View
         android:id="@+id/notif"
-        android:layout_width="40dp"
-        android:layout_height="33dp"
+        android:layout_width="37dp"
+        android:layout_height="30dp"
         android:layout_alignStart="@id/rectangle_1"
         android:layout_alignTop="@id/rectangle_1"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/notif_coba"
-        android:alpha="0.3"/>
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="21dp"
+        android:alpha="0.3"
+        android:background="@drawable/notif_coba" />
+
     <View
         android:id="@+id/bulat"
         android:layout_width="240.61dp"
@@ -69,21 +69,21 @@
         android:fontFamily="@font/poppins_bold"
         android:text="Data Konsultasi Anda!"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
 
     <TextView
         android:id="@+id/txt_lihat"
-        android:layout_width="130dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rectangle_1"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="273dp"
+        android:layout_marginStart="255dp"
         android:layout_marginLeft="261dp"
         android:layout_marginTop="199dp"
-        android:layout_marginEnd="-10dp"
+        android:layout_marginEnd="9dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="@string/lihat"
@@ -146,7 +146,7 @@
         android:textColorHint="#A3A3AE"
         android:textSize="14sp" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="459dp"
         android:layout_alignParentStart="true"
@@ -165,31 +165,124 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="349dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="349dp"
+                    android:layout_height="115dp"
+                    android:background="@color/white">
 
-                <GridView
-                    android:id="@+id/grid_home"
-                    android:layout_width="363dp"
-                    android:layout_height="441dp"
-                    android:numColumns="2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/biru_2"
+                        >
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/nomor_konsul"
+                        android:layout_width="100dp"
+                        android:layout_height="24dp"
+                        android:background="@color/biru_2"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Konsultasi 1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tanggal"
+                        android:layout_width="80dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="270dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/biru_2"
+                        android:fontFamily="@font/poppins"
+                        android:text="12/12/2021"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+
+                       >
+
+                    </TextView>
+
+                    <View
+                        android:layout_width="88dp"
+                        android:layout_height="80dp"
+                        android:background="#F2F2F2"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginStart="262dp"
+                        >
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/btncekHasil"
+                        android:layout_width="81dp"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="265dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Cek Hasil Konsultasi"
+                        android:textColor="@color/pink"
+                        android:textSize="14sp"
+
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_hasil"
+                        android:layout_width="230dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="58dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Cek Hasil Konsultasi"
+                        android:textColor="@color/biru_2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.517">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
         </ScrollView>
-    </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="28dp"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
         android:layout_alignStart="@id/rectangle_1"
         android:layout_alignTop="@id/rectangle_1"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="275dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/notif" />
 
