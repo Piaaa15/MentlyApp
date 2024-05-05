@@ -85,7 +85,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="230dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -94,25 +94,80 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <GridView
-                    android:id="@+id/grid_home"
-                    android:layout_width="363dp"
-                    android:layout_height="441dp"
-                    android:numColumns="2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="360dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/desain1">
+
+                <TextView
+                    android:id="@+id/adminpasien"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Pasien: "
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/adminGejala"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Gejala: "
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/adminPenyakit"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Penyakit: "
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/adminResepobat"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Resep Obat: "
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/txt_lihat2"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="261dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginEnd="-10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/pilih2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
         </ScrollView>
-    </LinearLayout>
-
-
 </RelativeLayout>
-
 
