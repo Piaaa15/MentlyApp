@@ -21,7 +21,6 @@
         android:background="@drawable/kotak_pink_home" />
 
 
-
     <View
         android:id="@+id/notif"
         android:layout_width="40dp"
@@ -165,23 +164,52 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_home"
+                    android:layout_marginStart="30dp">
 
-                <GridView
-                    android:id="@+id/grid_home"
-                    android:layout_width="363dp"
-                    android:layout_height="560dp"
-                    android:numColumns="2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </View>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_home"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="150dp">
+
+                </View>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_home"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="300dp">
+
+                </View>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_home"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="450dp">
+
+                </View>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_home"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="600dp">
+
+                </View>
+            </RelativeLayout>
         </ScrollView>
     </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imageView3"

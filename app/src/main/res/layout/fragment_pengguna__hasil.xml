@@ -77,27 +77,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
             <androidx.cardview.widget.CardView
-                android:layout_width="349dp"
+                android:layout_width="350dp"
                 android:layout_height="200dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="15dp"
                 app:cardCornerRadius="10dp"
+                android:background="@drawable/desain1"
 
                 >
                 <RelativeLayout
                     android:layout_width="350dp"
-                    android:layout_height="190dp"
-                    android:background="@color/white"
-                    android:strokeColor="@color/biru_2">
+                    android:layout_height="180dp"
+                    android:background="@color/white">
 
                     <View
                         android:id="@+id/view4"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_width="350dp"
+                        android:layout_height="140dp"
                         android:background="@color/biru_2">
-
+                    </View>
+                    <View
+                        android:layout_width="350dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/desain2"
+                        android:layout_marginTop="139dp">
 
                     </View>
 
@@ -107,7 +112,7 @@
                         android:layout_height="24dp"
                         android:background="@color/biru_2"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="Penyakit : "
+                        android:text="Penyakit       : "
                         android:textColor="@color/white"
                         android:textSize="14sp"
                         android:layout_marginStart="6dp"
@@ -145,7 +150,7 @@
                         android:layout_height="24dp"
                         android:background="@color/biru_2"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="Solusi : "
+                        android:text="Solusi               : "
                         android:textColor="@color/white"
                         android:textSize="14sp"
                         android:layout_marginStart="6dp"
@@ -159,21 +164,96 @@
 
                     </TextView>
                     <TextView
-                        android:id="@+id/Tingkatsatres"
-                        android:layout_width="100dp"
+                        android:id="@+id/Tingkatstres"
+                        android:layout_width="110dp"
                         android:layout_height="24dp"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="Tingkat Stres: "
+                        android:text="Tingkat Stres : "
                         android:textColor="@color/biru_2"
                         android:textSize="14sp"
                         android:layout_marginStart="6dp"
-                        android:layout_marginTop="159dp"
+                        android:layout_marginTop="148dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/Penyakit"
+                        android:layout_width="100dp"
+                        android:layout_height="24dp"
+                        android:background="@color/biru_2"
+                        android:fontFamily="@font/poppins"
+                        android:text="Anxiety "
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/ResepObat2"
+                        android:layout_width="300dp"
+                        android:layout_height="24dp"
+                        android:background="@color/biru_2"
+                        android:fontFamily="@font/poppins"
+                        android:text="Carbamazepine, Lamotrigin "
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/Solusi1"
+                        android:layout_width="300dp"
+                        android:layout_height="87dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Keluarga dengan emosi rendah bantu atasi skizofrenia, kurangi ekspresi berlebih, hindari kambuh."
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="53dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/Tingkatstres2"
+                        android:layout_width="110dp"
+                        android:layout_height="24dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Rendah "
+                        android:textColor="@color/rendah"
+                        android:textSize="14sp"
+                        android:layout_marginStart="110dp"
+                        android:layout_marginTop="148dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
                     </TextView>
                     <TextView
                         android:id="@+id/tanggal"
@@ -193,11 +273,11 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="20dp"
-                        android:layout_height="30dp"
-                        android:layout_marginStart="310dp"
-                        android:layout_marginTop="155dp"
-                        android:src="@drawable/tempatsampah" />
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="300dp"
+                        android:layout_marginTop="148dp"
+                        android:src="@drawable/tempatsampah1" />
 
 
                 </RelativeLayout>
