@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pengguna_Konsul"
+    tools:context=".Admin_Home"
     android:background="@color/white">
+
     <View
         android:id="@+id/rectangle_1"
         android:layout_width="335dp"
@@ -42,511 +43,524 @@
         android:id="@+id/txtSilahkan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Konsultasikan Masalah Anda!"
+        android:text="Silahkan mengisi data berikut"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
-
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="1200dp"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginTop="135dp"
-    android:layout_marginEnd="0dp"
-    android:layout_marginBottom="5dp">
-
-
-    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        android:layout_height="1000dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="5dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-           >
-
-            <Button
-            android:id="@+id/btnTambahKOnsul"
-            android:layout_width="200dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/btn_daftar1"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Tambahkan"
-            android:textAllCaps="false"
-            android:textSize="13sp"
-                />
-        <View
-            android:id="@+id/view2"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan1" />
-        <View
-            android:id="@+id/view3"
-            android:layout_width="335dp"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan2" />
-        <View
-            android:id="@+id/view4"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view3"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan1" />
-        <View
-            android:id="@+id/view6"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view4"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan2" />
-        <View
-            android:id="@+id/view7"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view6"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan1" />
-        <View
-            android:id="@+id/view8"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view7"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan2" />
-        <View
-            android:id="@+id/view9"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view8"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan1" />
-        <View
-            android:id="@+id/view10"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view9"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan2" />
-        <View
-            android:id="@+id/view11"
-            android:layout_width="wrap_content"
-            android:layout_height="85dp"
-            android:layout_below="@+id/view10"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:background="@drawable/pernyataan1" />
-
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="125dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya lebih sering menangis daripada sebelumnya"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="176dp"
-                android:layout_marginStart="180dp"
-                >
-
-                <RadioButton
-                    android:id="@+id/jwbya1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+<!--                pernyataan 1 awal-->
+                <View
+                    android:id="@+id/view2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan1" />
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="23dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya lebih sering menangis daripada sebelumnya"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-                <RadioButton
-                    android:id="@+id/jwbtdk1"
+                    <RadioButton
+                        android:id="@+id/jwbtdk1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+
+<!--                pernyataan kedua-->
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="335dp"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan2" />
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Beberapa pekan terakhir Saya merasa kecewa atau membenci diri saya sendiri "
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="150dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/jwbya2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Ya"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/jwbtdk2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tidak"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+
+
+                </RadioGroup>
+<!--                pernyataan ketiga-->
+                <View
+                    android:id="@+id/view4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view3"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan1" />
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="200dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa sebagai orang yang gagal"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="250dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/jwbtdk3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
 
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="225dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa kecewa atau membenci diri saya sendiri "
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup2"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="276dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya2"
+                </RadioGroup>
+<!--                pernyataan keempat-->
+                <View
+                    android:id="@+id/view6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan2" />
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="300dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa kurang istirahat hingga sulit untuk  diam"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="350dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-                <RadioButton
-                    android:id="@+id/jwbtdk2"
+                    <RadioButton
+                        android:id="@+id/jwbtdk4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+                <View
+                    android:id="@+id/view7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view6"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan1" />
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="400dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup5"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/jwbtdk5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
 
-
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="327dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa sebagai orang yang gagal"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup3"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="376dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya3"
+                </RadioGroup>
+                <View
+                    android:id="@+id/view8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view7"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan2" />
 
-                <RadioButton
-                    android:id="@+id/jwbtdk3"
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="500dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Beberapa pekan terakhir Saya tidak dapat mengontrol kekhawatiran"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup6"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="550dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/jwbtdk6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+                <View
+                    android:id="@+id/view9"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view8"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan1" />
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="600dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
 
-            </RadioGroup>
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="427dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa kurang istirahat hingga sulit untuk  diam"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup4"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="476dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya4"
+                <RadioGroup
+                    android:id="@+id/radioGroup7"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="650dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/jwbya7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Ya"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/jwbtdk7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tidak"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                </RadioGroup>
+                <View
+                    android:id="@+id/view10"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view9"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan2" />
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="700dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup8"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="750dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-                <RadioButton
-                    android:id="@+id/jwbtdk4"
+                    <RadioButton
+                        android:id="@+id/jwbtdk8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+                <View
+                    android:id="@+id/view11"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/view10"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/pernyataan1" />
+                <TextView
+                    android:id="@+id/tv9"
+                    android:layout_width="342dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="800dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
+                    android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
+                    android:textColor="@color/biru_2"
+                    android:textSize="16dp" />
+                <RadioGroup
+                    android:id="@+id/radioGroup9"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="850dp"
+                    android:layout_marginStart="220dp"
+                    >
+                    <RadioButton
+                        android:id="@+id/jwbya9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Ya"
+                        android:buttonTint="@color/black"/>
 
-            </RadioGroup>
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="527dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup5"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="576dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya5"
+                    <RadioButton
+                        android:id="@+id/jwbtdk9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="16dp"
+                        android:text="Tidak"
+                        android:buttonTint="@color/black"/>
+
+                </RadioGroup>
+                <Button
+                    android:id="@+id/btnTambahKOnsul"
+                    android:layout_width="250dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="910dp"
+                    android:background="@drawable/btn_daftar1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Tambahkan"
+                    android:textAllCaps="false"
+                    android:textSize="13sp"
+                    />
+                <View
+                    android:id="@+id/viewakhir"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/btnTambahKOnsul"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/white" />
 
-                <RadioButton
-                    android:id="@+id/jwbtdk5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
 
-            </RadioGroup>
 
-        <TextView
-            android:id="@+id/tv6"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="627dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya tidak dapat mengontrol kekhawatiran"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup6"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="676dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
-
-                <RadioButton
-                    android:id="@+id/jwbtdk6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
-
-            </RadioGroup>
-        <TextView
-            android:id="@+id/tv7"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="727dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup7"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="776dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
-
-                <RadioButton
-                    android:id="@+id/jwbtdk7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
-
-            </RadioGroup>
-        <TextView
-            android:id="@+id/tv8"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="827dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup8"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="876dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
-
-                <RadioButton
-                    android:id="@+id/jwbtdk8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
-
-            </RadioGroup>
-        <TextView
-            android:id="@+id/tv9"
-            android:layout_width="342dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="927dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Beberapa pekan terakhir Saya merasa gugup, cemas dan gelisah"
-            android:textColor="@color/biru_2"
-            android:textSize="16dp" />
-            <RadioGroup
-                android:id="@+id/radioGroup9"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="976dp"
-                android:layout_marginStart="180dp"
-                >
-                <RadioButton
-                    android:id="@+id/jwbya9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Ya"
-                    android:buttonTint="@color/black"/>
-
-                <RadioButton
-                    android:id="@+id/jwbtdk9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textSize="16dp"
-                    android:text="Tidak"
-                    android:buttonTint="@color/black"/>
-
-            </RadioGroup>
-
-        </RelativeLayout>
-    </ScrollView>
-</LinearLayout>
 </RelativeLayout>
 
 

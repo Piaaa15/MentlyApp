@@ -151,6 +151,36 @@
                     android:textColor="@color/white"
                     android:textSize="17sp" />
                 <TextView
+                    android:id="@+id/txtPasienRiwayat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Pia"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/txtPasienGejala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Keputusan Buru-buru"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"  />
+                <TextView
+                    android:id="@+id/txtPRiwayat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="98dp"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Antisocial Personality Disorder (ASPD)"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <TextView
                     android:id="@+id/txt_lihat2"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"

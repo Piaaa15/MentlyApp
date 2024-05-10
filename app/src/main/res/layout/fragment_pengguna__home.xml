@@ -21,6 +21,15 @@
         android:background="@drawable/kotak_pink_home" />
 
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_alignStart="@id/rectangle_1"
+        android:layout_alignTop="@id/rectangle_1"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/notif" />
     <View
         android:id="@+id/notif"
         android:layout_width="37dp"
@@ -146,7 +155,7 @@
         android:textColorHint="#A3A3AE"
         android:textSize="14sp" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="459dp"
         android:layout_alignParentStart="true"
@@ -175,8 +184,8 @@
                 app:cardCornerRadius="10dp"
                 >
                 <RelativeLayout
-                    android:layout_width="349dp"
-                    android:layout_height="115dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/white">
 
                     <View
@@ -274,17 +283,9 @@
 
             </androidx.cardview.widget.CardView>
         </ScrollView>
-    </RelativeLayout>
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="36dp"
-        android:layout_height="24dp"
-        android:layout_alignStart="@id/rectangle_1"
-        android:layout_alignTop="@id/rectangle_1"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/notif" />
+
 
 
 </RelativeLayout>
