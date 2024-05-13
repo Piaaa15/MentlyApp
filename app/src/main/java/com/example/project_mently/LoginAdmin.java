@@ -21,7 +21,7 @@ public class LoginAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_admin);
 
-        btnMasuk = findViewById(R.id.btn_masuk1);
+        btnMasuk = findViewById(R.id.btn_masukAdmin);
         btnBack = findViewById(R.id.btn_back1);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
