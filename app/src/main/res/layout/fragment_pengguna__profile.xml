@@ -56,7 +56,7 @@
         android:textSize="18dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/btnInformasiPasien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
@@ -112,7 +112,7 @@
         android:layout_width="351dp"
         android:layout_height="45dp"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="630dp"
         android:background="@drawable/btnkeluar"
         android:textColor="@color/biru_2" />
 
@@ -135,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="708dp"
+        android:layout_marginTop="638dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Keluar"
         android:textColor="@color/biru_2"
@@ -149,13 +149,13 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/fadiyah" />
     <TextView
-        android:id="@+id/nama"
+        android:id="@+id/userProfilePasien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
         android:layout_marginTop="105dp"
         android:fontFamily="@font/poppins"
-        android:text="Fadiyahsari"
+        android:text="User"
         android:textColor="@color/black"
         android:textSize="18dp" />
     <TextView

@@ -16,13 +16,13 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/fadiyah" />
     <TextView
-        android:id="@+id/nama"
+        android:id="@+id/userProfileAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
         android:layout_marginTop="105dp"
         android:fontFamily="@font/poppins"
-        android:text="Piaaa"
+        android:text="Admin"
         android:textColor="@color/black"
         android:textSize="18dp" />
     <TextView

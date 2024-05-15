@@ -1,5 +1,6 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +62,13 @@ public class Admin_Profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_admin__profile, container, false);
+    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TextView txtUsername = (TextView) getView().findViewById(R.id.userProfileAdmin);
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("username");
+        txtUsername.setText(username);
     }
 }

@@ -266,7 +266,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginTop="58dp"
                         android:fontFamily="@font/poppins"
-                        android:text="Cek Hasil Konsultasi"
+                        android:text="Gejala"
                         android:textColor="@color/biru_2"
                         android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"

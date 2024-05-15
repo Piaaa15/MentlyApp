@@ -1,5 +1,6 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -33,6 +34,10 @@ public class HomepageAdmin extends AppCompatActivity {
         final TextView texthome = findViewById(R.id.text_home);
         final TextView textstatus = findViewById(R.id.text_status);
         final TextView textprofil = findViewById(R.id.text_profile);
+
+        Intent intent = getIntent();
+        String nama = intent.getStringExtra("username");
+
         getSupportFragmentManager()
                 .beginTransaction().setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, Admin_Home.class,null)

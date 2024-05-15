@@ -1,5 +1,6 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,34 @@ public class Pengguna_Profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pengguna__profile, container, false);
+    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TextView txtUsername = (TextView) getView().findViewById(R.id.userProfilePasien);
+
+
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("nama");
+        txtUsername.setText(username);
+
+        ImageView btnInfo = getView().findViewById(R.id.btnInformasiPasien);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Informasi_Pribadi.class);
+                startActivity(intent);
+            }
+        });
+
+        View btnKeluar = getView().findViewById(R.id.button);
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WelcomePage.class);
+                startActivity(intent);
+                Toast.makeText(getActivity(), "Berhasil Keluar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
