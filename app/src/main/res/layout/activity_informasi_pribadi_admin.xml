@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Informasi_Pribadi"
+    tools:context=".Informasi_Pribadi_Admin"
     android:background="@color/white">
     <ImageView
         android:id="@+id/imageView11"
@@ -15,13 +15,13 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/fadiyah" />
     <TextView
-        android:id="@+id/nama1"
+        android:id="@+id/nama2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
         android:layout_marginTop="105dp"
         android:fontFamily="@font/poppins"
-        android:text="FadiyahSari"
+        android:text="Piaaa"
         android:textColor="@color/black"
         android:textSize="18dp" />
     <TextView
@@ -31,7 +31,7 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="134dp"
         android:fontFamily="@font/poppins"
-        android:text="Pasien"
+        android:text="Admin"
         android:textColor="#1E1EAE"
         android:textSize="16dp" />
     <ImageView
@@ -71,7 +71,7 @@
 
 
     <TextView
-        android:id="@+id/namalengkap"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_pengaturanakun"
@@ -79,11 +79,11 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins"
-        android:text="Nama Lengkap"
+        android:text="username"
         android:textColor="@color/black"
         android:textSize="18dp" />
     <EditText
-        android:id="@+id/nama"
+        android:id="@+id/usrname"
         android:layout_width="360dp"
         android:layout_height="57dp"
         android:layout_marginStart="24dp"
@@ -92,62 +92,24 @@
         android:textColor="@color/biru_2"
         android:text="   nama" />
     <TextView
-        android:id="@+id/txt_Email"
+        android:id="@+id/txt_Pasword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="Email"
+        android:text="Pasword"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:layout_marginTop="340dp"
         android:layout_marginStart="24dp" />
     <EditText
-        android:id="@+id/Email1"
+        android:id="@+id/pw"
         android:layout_width="360dp"
         android:layout_height="57dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="368dp"
         android:background="@drawable/btnkeluar"
         android:textColor="@color/biru_2"
-        android:text="   Email" />
-    <TextView
-        android:id="@+id/txt_umur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="Umur"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginStart="24dp" />
-    <EditText
-        android:id="@+id/umur1"
-        android:layout_width="360dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="475dp"
-        android:background="@drawable/btnkeluar"
-        android:textColor="@color/biru_2"
-        android:text="   Umur" />
-    <TextView
-        android:id="@+id/txt_jenkel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="Jenis Kelamin"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        android:layout_marginTop="560dp"
-        android:layout_marginStart="24dp" />
-    <EditText
-        android:id="@+id/jenkel1"
-        android:layout_width="360dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="585dp"
-        android:background="@drawable/btnkeluar"
-        android:textColor="@color/biru_2"
-        android:text="   Jenis Kelamin" />
+        android:text="   Pasword" />
 
     <Button
         android:id="@+id/button2"
@@ -156,11 +118,7 @@
         android:text="Ubah"
         android:layout_marginTop="750dp"
         android:layout_marginStart="30dp"
-        android:background="@drawable/button_masuk1"
-
-        />
-
-
+        android:background="@drawable/button_masuk1" />
 </RelativeLayout>
 
 
