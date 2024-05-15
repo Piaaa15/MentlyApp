@@ -95,17 +95,19 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <EditText
-        android:id="@+id/masukkanumur"
+        android:id="@+id/edtUmur"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
-        android:hint="masukkan umur"
-        android:inputType="text"
+        android:hint="24"
+        android:inputType="number"
         android:paddingStart="15dp"
         android:textColor="@color/biru_2"
         android:textColorHint="#804094A7"
         android:textSize="14sp"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -128,18 +130,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_masukkanjenkel"
+        android:id="@+id/edtJenkel"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="116dp"
         android:background="@drawable/form_input"
         android:ems="10"
-        android:hint="Masukkan Jenis Kelamin"
+        android:hint="Pilih Jenis Kelamin"
         android:inputType="text"
         android:paddingStart="15dp"
         android:textColor="@color/biru_2"
         android:textColorHint="#804094A7"
         android:textSize="14sp"
+        android:focusableInTouchMode="true"
+        android:drawableRight="@drawable/arrow_dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -148,7 +152,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_masuk1"
+        android:id="@+id/btn_lanjut"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginBottom="88dp"
@@ -162,7 +166,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_masukkanjenkel"
+        app:layout_constraintTop_toBottomOf="@+id/edtJenkel"
         app:layout_constraintVertical_bias="0.98" />
 
     <TextView
@@ -181,17 +185,19 @@
         app:layout_constraintVertical_bias="0.155" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtNamaLengkap"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
-        android:hint="masukkan nama lengkap"
+        android:hint="namaku"
         android:inputType="text"
         android:paddingStart="15dp"
         android:textColor="@color/biru_2"
         android:textColorHint="#804094A7"
         android:textSize="14sp"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -215,18 +221,20 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <EditText
-        android:id="@+id/et_maukkanemail"
+        android:id="@+id/edtEmail"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="116dp"
         android:background="@drawable/form_input"
         android:ems="10"
-        android:hint="masukkan kata sandi"
+        android:hint="coba@gmail.com"
         android:inputType="text"
         android:paddingStart="15dp"
+        android:focusableInTouchMode="true"
         android:textColor="@color/biru_2"
         android:textColorHint="#804094A7"
         android:textSize="14sp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

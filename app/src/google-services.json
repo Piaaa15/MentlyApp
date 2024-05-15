@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434334045207",
+    "project_id": "mentlyapp-cc9b0",
+    "storage_bucket": "mentlyapp-cc9b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434334045207:android:5408b684bbc3364052f852",
+        "android_client_info": {
+          "package_name": "com.example.project_mently"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOV-3xsY5hceQiSu2Y_stAwPo6cB8OO_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

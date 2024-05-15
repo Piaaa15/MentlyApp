@@ -1,12 +1,16 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,14 @@ public class Pengguna_Home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pengguna__home, container, false);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        // Set the text for the TextView
+        TextView txtUsername = (TextView) getView().findViewById(R.id.namauser);
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("nama");
+        txtUsername.setText(username);
     }
 }

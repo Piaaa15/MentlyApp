@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.097" />
 
     <ImageView
-        android:id="@+id/btn_back1"
+        android:id="@+id/btnBack"
         android:layout_width="20dp"
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_BuatKataSandi"
+        app:layout_constraintTop_toBottomOf="@+id/edtBuatSandi"
         app:layout_constraintVertical_bias="0.98" />
 
     <TextView
@@ -83,7 +83,7 @@
         app:layout_constraintVertical_bias="0.155" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtNamaPengguna"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
@@ -117,7 +117,7 @@
         app:layout_constraintVertical_bias="0.266" />
 
     <EditText
-        android:id="@+id/et_BuatKataSandi"
+        android:id="@+id/edtBuatSandi"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginBottom="116dp"

@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.17" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/edtUsernameP"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.292" />
 
     <EditText
-        android:id="@+id/et_katasandi"
+        android:id="@+id/edtKatasandiP"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"

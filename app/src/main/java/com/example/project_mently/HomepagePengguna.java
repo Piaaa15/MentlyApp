@@ -1,5 +1,6 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -35,6 +36,12 @@ public class HomepagePengguna extends AppCompatActivity {
         final TextView textkonsultasi = findViewById(R.id.text_konsultasi);
         final TextView textstatus = findViewById(R.id.text_status);
         final TextView textprofil = findViewById(R.id.text_profile);
+
+        Intent intent = getIntent();
+        String nama = intent.getStringExtra("nama");
+        String email = intent.getStringExtra("email");
+        String umur = intent.getStringExtra("umur");
+        String jenkel = intent.getStringExtra("jenkel");
 
         getSupportFragmentManager()
                 .beginTransaction().setReorderingAllowed(true)
