@@ -6,11 +6,25 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodeJava.Konsul;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +41,12 @@ public class Pengguna_Home extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private DatabaseReference mdatabase;
+    private RecyclerView recyclerView;
+    private KonsulAdapter adapter;
+    private List<Konsul> konsulList;
+
 
     public Pengguna_Home() {
         // Required empty public constructor
@@ -70,8 +90,35 @@ public class Pengguna_Home extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         // Set the text for the TextView
         TextView txtUsername = (TextView) getView().findViewById(R.id.namauser);
+
         Intent intent =getActivity().getIntent();
         String username = intent.getStringExtra("nama");
         txtUsername.setText(username);
+
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        konsulList = new ArrayList<>();
+        adapter = new KonsulAdapter(konsulList);
+        recyclerView.setAdapter(adapter);
+
+        mdatabase = FirebaseDatabase.getInstance().getReference("Konsul");
+        Query query = mdatabase.orderByChild("namaPasien").equalTo(username);
+
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                konsulList.clear();
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    Konsul konsul = data.getValue(Konsul.class);
+                    konsulList.add(konsul);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

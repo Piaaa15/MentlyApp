@@ -1,12 +1,29 @@
 package com.example.project_mently;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodeJava.Konsul;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +40,10 @@ public class Pengguna_Hasil extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private DatabaseReference mdatabase;
+    private RecyclerView recyclerView;
+    private HasilKonsulAdapter adapter;
+    private List<Konsul> hasilKonsulList;
 
     public Pengguna_Hasil() {
         // Required empty public constructor
@@ -60,5 +81,37 @@ public class Pengguna_Hasil extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pengguna__hasil, container, false);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("nama");
+        recyclerView = view.findViewById(R.id.recyclerViewHasil);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        hasilKonsulList = new ArrayList<>();
+        adapter = new HasilKonsulAdapter(hasilKonsulList, this.getContext());
+        recyclerView.setAdapter(adapter);
+
+        mdatabase = FirebaseDatabase.getInstance().getReference("Konsul");  // Assuming "HasilKonsul" is the correct reference
+        Query query = mdatabase.orderByChild("namaPasien").equalTo(username);
+
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                hasilKonsulList.clear();
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    Konsul hasilKonsul = data.getValue(Konsul.class);
+                    hasilKonsulList.add(hasilKonsul);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle possible errors.
+            }
+        });
     }
 }

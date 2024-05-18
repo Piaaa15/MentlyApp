@@ -1,0 +1,110 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="349dp"
+    android:layout_height="105dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/biru_2"
+            >
+
+        </View>
+
+        <TextView
+            android:id="@+id/nomor_konsul"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:background="@color/biru_2"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/biru_2"
+            android:fontFamily="@font/poppins"
+            android:text="no data"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            >
+
+        </TextView>
+
+        <View
+            android:layout_width="88dp"
+            android:layout_height="80dp"
+            android:background="#F2F2F2"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="262dp"
+            >
+
+        </View>
+
+        <TextView
+            android:id="@+id/btncekHasil"
+            android:layout_width="81dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="265dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Cek Hasil Konsultasi"
+            android:textColor="@color/pink"
+            android:textSize="14sp"
+
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtGejala"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/poppins"
+            android:text="Data Konsultasi belum tersedia"
+            android:textColor="@color/biru_2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.517">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

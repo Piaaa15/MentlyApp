@@ -75,108 +75,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-                <RelativeLayout
-                    android:layout_width="360dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="25dp"
-                    android:background="@drawable/desain1">
 
-                    <TextView
-                        android:id="@+id/adminpasien"
-                        android:layout_width="350dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="9dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="Pasien: "
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/adminGejala"
-                        android:layout_width="350dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="Gejala: "
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/adminPenyakit"
-                        android:layout_width="350dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="Penyakit: "
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/adminResepobat"
-                        android:layout_width="350dp"
-                        android:layout_height="34dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="Resep Obat: "
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/txtPasienRiwayat"
-                        android:layout_width="wrap_content"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/poppins"
-                        android:text="Pia"
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/txtPasienGejala"
-                        android:layout_width="wrap_content"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="80dp"
-                        android:layout_marginTop="35dp"
-                        android:fontFamily="@font/poppins"
-                        android:text="Keputusan Buru-buru"
-                        android:textColor="@color/white"
-                        android:textSize="17sp"  />
-                    <TextView
-                        android:id="@+id/txtPRiwayat"
-                        android:layout_width="wrap_content"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="98dp"
-                        android:layout_marginTop="60dp"
-                        android:fontFamily="@font/poppins"
-                        android:text="Antisocial Personality Disorder (ASPD)"
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                    <TextView
-                        android:id="@+id/txt_lihat2"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginStart="2dp"
-                        android:layout_marginLeft="261dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="-10dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:gravity="center"
-                        android:text="@string/pilih2"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-                </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewRiwayat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="1000dp"
+                    android:background="@color/white"
+
+                    >
+
+                </View>
+
+            </RelativeLayout>
+
         </ScrollView>
     </LinearLayout>
 

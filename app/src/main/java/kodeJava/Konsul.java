@@ -1,18 +1,20 @@
 package kodeJava;
 
 public class Konsul {
-    String penyakit, gejala, solusi, resepObat, tingkatStress, tanggal;
+    String idKonsul, penyakit, gejala, solusi, resepObat, tingkatStress, tanggal, namaPasien;
 
     public Konsul() {
     }
 
-    public Konsul(String penyakit, String gejala, String solusi, String resepObat, String tingkatStress, String tanggal) {
+    public Konsul(String idKonsul, String penyakit, String gejala, String solusi, String resepObat, String tingkatStress, String tanggal, String namaPasien) {
         this.penyakit = penyakit;
         this.gejala = gejala;
         this.solusi = solusi;
         this.resepObat = resepObat;
         this.tingkatStress = tingkatStress;
         this.tanggal = tanggal;
+        this.namaPasien = namaPasien;
+        this.idKonsul = idKonsul;
     }
 
     public String getPenyakit() {
@@ -61,5 +63,20 @@ public class Konsul {
 
     public void setTanggal(String tanggal) {
         this.tanggal = tanggal;
+    }
+
+    public String getNamaPasien() {
+        return namaPasien;
+    }
+    public void setNamaPasien(String namaPasien) {
+        this.namaPasien = namaPasien;
+    }
+
+    public String getIdKonsul() {
+        return idKonsul;
+    }
+
+    public void setIdKonsul(String idKonsul) {
+        this.idKonsul = idKonsul;
     }
 }
