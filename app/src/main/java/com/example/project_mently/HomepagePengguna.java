@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
 public class HomepagePengguna extends AppCompatActivity {
     private int selectedTab = 1;
@@ -22,6 +23,7 @@ public class HomepagePengguna extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage_pengguna);
+
         final LinearLayout penerima_home = findViewById(R.id.page_home);
         final LinearLayout penerima_beasiswa = findViewById(R.id.page_konsultasi);
         final LinearLayout penerima_status = findViewById(R.id.page_status);

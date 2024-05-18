@@ -35,7 +35,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HasilKon
     public RiwayatAdapter(List<Konsul> hasilKonsulList, Context parent) {
         this.hasilKonsulList = hasilKonsulList;
         this.parentContext = parent;
-
     }
 
     @NonNull
@@ -54,11 +53,13 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HasilKon
 
         holder.lihatTextView.setOnClickListener(v -> {
             Intent intent = new Intent(parentContext, DetailPasien.class);
-            intent.putExtra("konsulId", hasilKonsul.getIdKonsul()); // Assuming Konsul has an getId() method
+            intent.putExtra("namaPasien", hasilKonsul.getNamaPasien());
+            intent.putExtra("penyakit", hasilKonsul.getPenyakit());
+            intent.putExtra("gejala", hasilKonsul.getGejala());
             parentContext.startActivity(intent);
         });
-
     }
+
     @Override
     public int getItemCount() {
         return hasilKonsulList.size();
@@ -73,13 +74,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HasilKon
             penyakitTextView = itemView.findViewById(R.id.txtPRiwayat);
             gejalaTextView = itemView.findViewById(R.id.txtPasienGejala);
             lihatTextView = itemView.findViewById(R.id.txt_lihat2);
-
-
         }
     }
-
-
-
-
-
 }

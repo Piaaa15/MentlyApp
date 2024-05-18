@@ -45,6 +45,7 @@ public class Pengguna_Hasil extends Fragment {
     private HasilKonsulAdapter adapter;
     private List<Konsul> hasilKonsulList;
 
+
     public Pengguna_Hasil() {
         // Required empty public constructor
     }
@@ -85,6 +86,7 @@ public class Pengguna_Hasil extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
         Intent intent =getActivity().getIntent();
         String username = intent.getStringExtra("nama");

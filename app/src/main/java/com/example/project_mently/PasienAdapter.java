@@ -1,6 +1,7 @@
 package com.example.project_mently;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import kodeJava.Pasien;
@@ -45,7 +49,9 @@ public class PasienAdapter extends RecyclerView.Adapter<PasienAdapter.PasienView
         holder.txtNamaPasien.setText(currentPasien.getNama());
         holder.txtJenkelPasien.setText(currentPasien.getJenkel());
         holder.txtUmurPasien.setText(currentPasien.getUmur());
-        holder.txtPasienAt.setText(currentPasien.getTanggalDibuat());
+
+        String formattedDate = formatDateString(currentPasien.getTanggalDibuat());
+        holder.txtPasienAt.setText(formattedDate);
     }
 
     @Override
@@ -69,11 +75,26 @@ public class PasienAdapter extends RecyclerView.Adapter<PasienAdapter.PasienView
                     if (mListener != null) {
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
-                            mListener.onItemClick(mPasienList.get(position));
+                            Pasien clickedPasien = mPasienList.get(position);
+                            Intent intent = new Intent(mContext, DetailPasien.class);
+                            intent.putExtra("namaPasien", clickedPasien.getNama());
+                            // You might want to add more data from clickedPasien if needed
+                            mContext.startActivity(intent);
                         }
                     }
                 }
             });
+        }
+    }
+    private String formatDateString(String dateString) {
+        SimpleDateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date date = originalFormat.parse(dateString);
+            return targetFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return dateString;
         }
     }
 }

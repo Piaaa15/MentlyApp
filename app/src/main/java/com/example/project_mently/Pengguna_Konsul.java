@@ -40,7 +40,6 @@ public class Pengguna_Konsul extends Fragment {
     private DatabaseReference mdatabase;
 
 
-
     public Pengguna_Konsul() {
         // Required empty public constructor
     }

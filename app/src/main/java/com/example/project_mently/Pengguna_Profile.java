@@ -28,6 +28,7 @@ public class Pengguna_Profile extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public Pengguna_Profile() {
         // Required empty public constructor
     }
@@ -65,31 +66,42 @@ public class Pengguna_Profile extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pengguna__profile, container, false);
     }
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView txtUsername = (TextView) getView().findViewById(R.id.userProfilePasien);
+        TextView txtUsername = view.findViewById(R.id.userProfilePasien);
 
-
-        Intent intent =getActivity().getIntent();
+        Intent intent = getActivity().getIntent();
         String username = intent.getStringExtra("nama");
-        txtUsername.setText(username);
+        String email = intent.getStringExtra("email");
+        String umur = intent.getStringExtra("umur");
+        String jenkel = intent.getStringExtra("jenkel");
 
-        ImageView btnInfo = getView().findViewById(R.id.btnInformasiPasien);
+        // Ensure the values are not null before using them
+        if (username != null) {
+            txtUsername.setText(username);
+        }
+
+        ImageView btnInfo = view.findViewById(R.id.btnInformasiPasien);
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Informasi_Pribadi.class);
-                startActivity(intent);
+                Intent infoIntent = new Intent(getActivity(), Informasi_Pribadi.class);
+                if (username != null) infoIntent.putExtra("nama", username);
+                if (email != null) infoIntent.putExtra("email", email);
+                if (umur != null) infoIntent.putExtra("umur", umur);
+                if (jenkel != null) infoIntent.putExtra("jenkel", jenkel);
+                startActivity(infoIntent);
             }
         });
 
-        View btnKeluar = getView().findViewById(R.id.button);
+
+        View btnKeluar = view.findViewById(R.id.button);
         btnKeluar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), WelcomePage.class);
-                startActivity(intent);
+                getActivity().finish();
                 Toast.makeText(getActivity(), "Berhasil Keluar", Toast.LENGTH_SHORT).show();
             }
         });
