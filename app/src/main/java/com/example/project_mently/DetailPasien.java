@@ -15,7 +15,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import kodeJava.Konsul;
 import kodeJava.Pasien;
@@ -70,7 +74,8 @@ public class DetailPasien extends AppCompatActivity {
                             txtNamaPasien.setText(pasien.getNama());
                             txtJenkelPasien.setText(pasien.getJenkel());
                             txtUmurPasien.setText(pasien.getUmur());
-                            txtPasienAt.setText(pasien.getTanggalDibuat());
+                            String formattedDate = formatDateString(pasien.getTanggalDibuat());
+                            txtPasienAt.setText(formattedDate);
                         }
                     }
                 }
@@ -112,5 +117,16 @@ public class DetailPasien extends AppCompatActivity {
                 // Handle possible errors
             }
         });
+    }
+    private String formatDateString(String dateString) {
+        SimpleDateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date date = originalFormat.parse(dateString);
+            return targetFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return dateString;
+        }
     }
 }

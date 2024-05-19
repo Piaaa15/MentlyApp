@@ -2,10 +2,12 @@ package com.example.project_mently;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +72,23 @@ public class Informasi_Pribadi extends AppCompatActivity {
                 updateUser();
             }
         });
+        edtJenkel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu dropDownMenu = new PopupMenu(getApplicationContext(), edtJenkel);
+                dropDownMenu.getMenuInflater().inflate(R.menu.dropdown_menu, dropDownMenu.getMenu());
+                dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        edtJenkel.setText(menuItem.getTitle());
+                        return true;
+                    }
+                });
+                dropDownMenu.show();
+
+            }
+        });
+        edtJenkel.clearFocus();
     }
 
     private void updateUser() {

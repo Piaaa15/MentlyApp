@@ -1,5 +1,7 @@
 package com.example.project_mently;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -8,7 +10,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,6 +74,55 @@ public class Admin_Profile extends Fragment {
         TextView txtUsername = (TextView) getView().findViewById(R.id.userProfileAdmin);
         Intent intent =getActivity().getIntent();
         String username = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
         txtUsername.setText(username);
+
+        ImageView btninformasi = (ImageView) getView().findViewById(R.id.btnInformasiAdmin);
+
+        btninformasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Informasi_Pribadi_Admin.class);
+                intent.putExtra("username", username);
+                intent.putExtra("password", password);
+                startActivity(intent);
+            }
+        });
+
+        ImageView btnBantuan = view.findViewById(R.id.btnBantuanAdmin);
+        btnBantuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ActivityBantuan.class);
+                startActivity(intent);
+            }
+        });
+
+        View btnKeluar = view.findViewById(R.id.btnKeluar);
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showConfirmationDialog();
+            }
+        });
+    }
+    private void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Konfirmasi Keluar");
+        builder.setMessage("Apakah Anda ingin keluar?");
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                getActivity().finish();
+                Toast.makeText(getActivity(), "Berhasil Keluar", Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
 }

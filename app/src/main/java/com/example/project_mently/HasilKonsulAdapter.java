@@ -51,7 +51,20 @@ public class HasilKonsulAdapter extends RecyclerView.Adapter<HasilKonsulAdapter.
         holder.penyakitTextView.setText(hasilKonsul.getPenyakit());
         holder.resepObatTextView.setText(hasilKonsul.getResepObat());
         holder.solusiTextView.setText(hasilKonsul.getSolusi());
-        holder.tingkatStresTextView.setText(hasilKonsul.getTingkatStress());
+
+        // Cek tingkat stres
+        String tingkatStress = hasilKonsul.getTingkatStress();
+
+        // Set warna berdasarkan tingkat stres
+        if (tingkatStress.equalsIgnoreCase("rendah")) {
+            holder.tingkatStresTextView.setTextColor(parentContext.getResources().getColor(R.color.rendah));
+        } else if (tingkatStress.equalsIgnoreCase("sedang")) {
+            holder.tingkatStresTextView.setTextColor(parentContext.getResources().getColor(R.color.sedang));
+        } else if (tingkatStress.equalsIgnoreCase("tinggi")) {
+            holder.tingkatStresTextView.setTextColor(parentContext.getResources().getColor(R.color.tinggi));
+        }
+
+        holder.tingkatStresTextView.setText(tingkatStress);
 
         String formattedDate = formatDateString(hasilKonsul.getTanggal());
         holder.tanggalTextView.setText(formattedDate);

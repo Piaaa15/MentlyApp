@@ -37,6 +37,7 @@ public class HomepageAdmin extends AppCompatActivity {
 
         Intent intent = getIntent();
         String nama = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
 
         getSupportFragmentManager()
                 .beginTransaction().setReorderingAllowed(true)

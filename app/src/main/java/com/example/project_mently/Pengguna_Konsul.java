@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -168,10 +169,7 @@ public class Pengguna_Konsul extends Fragment {
                     penyakit3 = "ASPD";
                     resepObat += "Obat ASPD";
                     solusi += "Solusi ASPD";
-
-
                 }
-
                 // Determine stress level
                 if (countPenyakit1 > 1 && countPenyakit2 > 1 && countPenyakit3 > 1) {
                     tingkatStress = "Tinggi";
@@ -191,20 +189,16 @@ public class Pengguna_Konsul extends Fragment {
                 String id = mdatabase.push().getKey();
 
                 Konsul konsul = new Konsul(id, penyakit_saya, Gejala, solusi, resepObat, tingkatStress, tanggalDibuat, username);
-
-
                 mdatabase.child(id).setValue(konsul);
-
+                // Setelah menambah data ke Firebase, arahkan pengguna ke fragment Pengguna_Hasil
+                Fragment penggunaHasilFragment = new Pengguna_Hasil();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragmentContainer, penggunaHasilFragment);
+                transaction.addToBackStack(null);  // Untuk dapat kembali ke fragment sebelumnya
+                transaction.commit();
                 Toast.makeText(getActivity(), "Konsultasi Berhasil", Toast.LENGTH_SHORT).show();
 
             }
-
-
         });
-
-
-
-
-
     }
 }

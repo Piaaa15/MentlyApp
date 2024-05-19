@@ -73,7 +73,9 @@ public class LoginAdmin extends AppCompatActivity {
                                     isLoginSuccessful = true;
                                     Intent i = new Intent(getApplicationContext(), HomepageAdmin.class);
                                     String username = snapshot.child("username").getValue().toString();
+                                    String password = snapshot.child("password").getValue().toString();
                                     i.putExtra("username", username);
+                                    i.putExtra("password", password);
                                     startActivity(i);
                                     Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
                                 }

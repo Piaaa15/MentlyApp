@@ -1,5 +1,7 @@
 package com.example.project_mently;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -96,14 +98,41 @@ public class Pengguna_Profile extends Fragment {
             }
         });
 
+        ImageView btnBantuan = view.findViewById(R.id.btnBantuanUser);
+        btnBantuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bantuanIntent = new Intent(getActivity(), ActivityBantuan.class);
+                startActivity(bantuanIntent);
+            }
+        });
+
 
         View btnKeluar = view.findViewById(R.id.button);
         btnKeluar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showConfirmationDialog();
+            }
+        });
+    }
+    private void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Konfirmasi Keluar");
+        builder.setMessage("Apakah Anda ingin keluar?");
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
                 getActivity().finish();
                 Toast.makeText(getActivity(), "Berhasil Keluar", Toast.LENGTH_SHORT).show();
             }
         });
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
 }
