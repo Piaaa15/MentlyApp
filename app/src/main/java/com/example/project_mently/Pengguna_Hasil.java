@@ -44,6 +44,8 @@ public class Pengguna_Hasil extends Fragment {
     private RecyclerView recyclerView;
     private HasilKonsulAdapter adapter;
     private List<Konsul> hasilKonsulList;
+    private static final String ARG_KONSUL = "arg_konsul";
+    private Konsul konsul1;
 
 
     public Pengguna_Hasil() {
@@ -59,11 +61,10 @@ public class Pengguna_Hasil extends Fragment {
      * @return A new instance of fragment Pengguna_Hasil.
      */
     // TODO: Rename and change types and number of parameters
-    public static Pengguna_Hasil newInstance(String param1, String param2) {
+    public static Pengguna_Hasil newInstance(Konsul konsul) {
         Pengguna_Hasil fragment = new Pengguna_Hasil();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putParcelable(ARG_KONSUL, konsul);
         fragment.setArguments(args);
         return fragment;
     }

@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -56,6 +57,7 @@ public class BuatNama extends AppCompatActivity {
                     mDatabase.child(id).child("password").setValue(password);
                     Intent i = new Intent(getApplicationContext(), LoginPasien.class);
                     startActivity(i);
+                    Toast.makeText(getApplicationContext(), "Berhasil Mendaftar, Silahkan Login", Toast.LENGTH_SHORT).show();
 
                 }
             }

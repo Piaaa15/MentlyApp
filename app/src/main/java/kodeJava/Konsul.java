@@ -1,6 +1,9 @@
 package kodeJava;
 
-public class Konsul {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Konsul implements Parcelable {
     String idKonsul, penyakit, gejala, solusi, resepObat, tingkatStress, tanggal, namaPasien;
 
     public Konsul() {
@@ -16,6 +19,48 @@ public class Konsul {
         this.namaPasien = namaPasien;
         this.idKonsul = idKonsul;
     }
+
+    protected Konsul(Parcel in) {
+        idKonsul = in.readString();
+        penyakit = in.readString();
+        gejala = in.readString();
+        solusi = in.readString();
+        resepObat = in.readString();
+        tingkatStress = in.readString();
+        tanggal = in.readString();
+        namaPasien = in.readString();
+    }
+
+    public static final Creator<Konsul> CREATOR = new Creator<Konsul>() {
+        @Override
+        public Konsul createFromParcel(Parcel in) {
+            return new Konsul(in);
+        }
+
+        @Override
+        public Konsul[] newArray(int size) {
+            return new Konsul[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(idKonsul);
+        dest.writeString(penyakit);
+        dest.writeString(gejala);
+        dest.writeString(solusi);
+        dest.writeString(resepObat);
+        dest.writeString(tingkatStress);
+        dest.writeString(tanggal);
+        dest.writeString(namaPasien);
+    }
+
+    // Getter dan Setter...
 
     public String getPenyakit() {
         return penyakit;

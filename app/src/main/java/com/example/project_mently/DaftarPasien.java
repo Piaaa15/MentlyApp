@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -100,6 +101,7 @@ public class DaftarPasien extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), BuatNama.class);
                 i.putExtra("userId", id);
                 startActivity(i);
+                    Toast.makeText(DaftarPasien.this, "Data berhasil disimpan, Lanjut Buat Username Password", Toast.LENGTH_LONG).show();
                 }
 
             }

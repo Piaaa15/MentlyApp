@@ -27,29 +27,12 @@
             android:name=".HomepageAdmin"
             android:exported="false" />
         <activity
-            android:name=".FragmentPenggunaKonsul"
-            android:exported="false" />
-        <activity
-            android:name=".FragmentPenggunaHome"
-            android:exported="false" />
-        <activity
             android:name=".HomepagePengguna"
             android:exported="true" />
         <activity
             android:name=".BuatNama"
             android:exported="false" />
-        <activity
-            android:name=".HomePagePasien"
-            android:exported="false" />
-        <activity
-            android:name=".BuatNamaSandi"
-            android:exported="false" />
-        <activity
-            android:name=".Buat_Nama_Sandi"
-            android:exported="false" />
-        <activity
-            android:name=".buat_nama_sandi"
-            android:exported="false" />
+
         <activity
             android:name=".DaftarPasien"
             android:exported="false" />
@@ -62,6 +45,8 @@
         <activity
             android:name=".WelcomePage"
             android:exported="true" />
+        <activity android:name=".Pengguna_Hasil"
+            android:exported="true"></activity>
         <activity
             android:name=".SplashScreen"
             android:exported="true">

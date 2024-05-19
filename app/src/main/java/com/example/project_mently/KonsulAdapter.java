@@ -1,4 +1,6 @@
 package com.example.project_mently;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +18,17 @@ import kodeJava.Konsul;
 public class KonsulAdapter extends RecyclerView.Adapter<KonsulAdapter.KonsulViewHolder> {
 
     private List<Konsul> konsulList;
+    private Context parentContext;
+    private OnHasilClickListener onHasilClickListener;
 
-    public KonsulAdapter(List<Konsul> konsulList) {
+    public interface OnHasilClickListener {
+        void onHasilClick(Konsul konsul);
+    }
+
+    public KonsulAdapter(List<Konsul> konsulList, Context parent, OnHasilClickListener listener) {
         this.konsulList = konsulList;
+        this.parentContext = parent;
+        this.onHasilClickListener = listener;
     }
 
     @NonNull
@@ -35,6 +45,13 @@ public class KonsulAdapter extends RecyclerView.Adapter<KonsulAdapter.KonsulView
         holder.txtTanggal.setText(formattedDate);
         holder.txtGejala.setText(konsul.getGejala());
         holder.nomorKonsul.setText("Konsultasi " + (position + 1));
+
+        holder.cekHasil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onHasilClickListener.onHasilClick(konsul);
+            }
+        });
     }
 
     @Override
@@ -43,17 +60,16 @@ public class KonsulAdapter extends RecyclerView.Adapter<KonsulAdapter.KonsulView
     }
 
     public static class KonsulViewHolder extends RecyclerView.ViewHolder {
-
-        TextView txtTanggal, txtGejala, nomorKonsul;
-
+        TextView txtTanggal, txtGejala, nomorKonsul, cekHasil;
         public KonsulViewHolder(@NonNull View itemView) {
             super(itemView);
             txtTanggal = itemView.findViewById(R.id.txtTanggal);
             txtGejala = itemView.findViewById(R.id.txtGejala);
             nomorKonsul = itemView.findViewById(R.id.nomor_konsul);
+            cekHasil = itemView.findViewById(R.id.btncekHasil);
         }
-
     }
+
     private String formatDateString(String dateString) {
         SimpleDateFormat originalFormat = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat targetFormat = new SimpleDateFormat("dd/MM/yyyy");

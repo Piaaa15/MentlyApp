@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,14 +32,13 @@ import kodeJava.Konsul;
  * Use the {@link Pengguna_Home#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Pengguna_Home extends Fragment {
+public class Pengguna_Home extends Fragment implements KonsulAdapter.OnHasilClickListener {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // Define parameter arguments
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    // Define parameters
     private String mParam1;
     private String mParam2;
 
@@ -47,21 +47,10 @@ public class Pengguna_Home extends Fragment {
     private KonsulAdapter adapter;
     private List<Konsul> konsulList;
 
-
-
     public Pengguna_Home() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Pengguna_Home.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Pengguna_Home newInstance(String param1, String param2) {
         Pengguna_Home fragment = new Pengguna_Home();
         Bundle args = new Bundle();
@@ -86,20 +75,20 @@ public class Pengguna_Home extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pengguna__home, container, false);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Set the text for the TextView
-        TextView txtUsername = (TextView) getView().findViewById(R.id.namauser);
 
-        Intent intent =getActivity().getIntent();
+        TextView txtUsername = view.findViewById(R.id.namauser);
+        Intent intent = getActivity().getIntent();
         String username = intent.getStringExtra("nama");
         txtUsername.setText(username);
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         konsulList = new ArrayList<>();
-        adapter = new KonsulAdapter(konsulList);
+        adapter = new KonsulAdapter(konsulList, getContext(), this);
         recyclerView.setAdapter(adapter);
 
         mdatabase = FirebaseDatabase.getInstance().getReference("Konsul");
@@ -118,8 +107,18 @@ public class Pengguna_Home extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                // Handle possible errors.
             }
         });
+    }
+
+    @Override
+    public void onHasilClick(Konsul konsul) {
+        Pengguna_Hasil hasilFragment = Pengguna_Hasil.newInstance(konsul);
+
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragmentContainer, hasilFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

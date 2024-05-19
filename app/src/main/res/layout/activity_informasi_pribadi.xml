@@ -38,8 +38,8 @@
         android:id="@+id/btn_back6"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="27dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/btn_back" />
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
         android:layout_marginTop="22dp"
@@ -167,12 +167,12 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/ubah"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Ubah"
-        android:layout_marginTop="750dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginStart="25dp"
         android:background="@drawable/button_masuk1"
 
         />
