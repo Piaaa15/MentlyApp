@@ -44,7 +44,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/btn_back" />
@@ -66,7 +66,7 @@
 
     <EditText
         android:id="@+id/edtUsernameP"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
@@ -78,7 +78,6 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNamaP"
         app:layout_constraintVertical_bias="0.0" />
@@ -93,14 +92,14 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.292" />
 
     <EditText
         android:id="@+id/edtKatasandiP"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
@@ -112,7 +111,6 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNamaP"
         app:layout_constraintVertical_bias="0.159" />

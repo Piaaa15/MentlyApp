@@ -2,9 +2,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="349dp"
+    android:layout_width="373dp"
     android:layout_height="120dp"
-    android:layout_marginStart="20dp"
+    android:layout_marginStart="25dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="15dp"
     android:layout_marginBottom="15dp"
@@ -26,9 +26,9 @@
             android:layout_marginEnd="30dp"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Pasien: "
+            android:text="Pasien           :"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/adminGejala"
             android:layout_width="350dp"
@@ -38,9 +38,9 @@
             android:layout_marginEnd="30dp"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Gejala: "
+            android:text="Gejala            :"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/adminPenyakit"
             android:layout_width="350dp"
@@ -50,9 +50,9 @@
             android:layout_marginEnd="30dp"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="Penyakit: "
+            android:text="Penyakit      :"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/adminResepobat"
             android:layout_width="350dp"
@@ -64,37 +64,37 @@
             android:fontFamily="@font/poppins_bold"
             android:text="Resep Obat: "
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/txtPasienRiwayat"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins"
             android:text="Pia"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/txtPasienGejala"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="35dp"
             android:fontFamily="@font/poppins"
             android:text="Keputusan Buru-buru"
             android:textColor="@color/white"
-            android:textSize="17sp"  />
+            android:textSize="14sp"  />
         <TextView
             android:id="@+id/txtPRiwayat"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginStart="98dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="60dp"
             android:fontFamily="@font/poppins"
             android:text="Antisocial Personality Disorder (ASPD)"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/txt_lihat2"
             android:layout_width="130dp"
@@ -102,7 +102,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="4dp"
             android:layout_marginLeft="261dp"
             android:layout_marginTop="85dp"
             android:layout_marginEnd="-10dp"

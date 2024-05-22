@@ -2,9 +2,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="349dp"
-    android:layout_height="105dp"
-    android:layout_marginStart="20dp"
+    android:layout_width="359dp"
+    android:layout_height="155dp"
+    android:layout_marginStart="30dp"
     android:layout_marginTop="10dp"
     android:layout_marginEnd="15dp"
     android:layout_marginBottom="15dp"
@@ -12,7 +12,7 @@
     >
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/white">
 
         <View
@@ -45,9 +45,9 @@
 
         <TextView
             android:id="@+id/txtTanggal"
-            android:layout_width="80dp"
+            android:layout_width="match_parent"
             android:layout_height="24dp"
-            android:layout_marginStart="270dp"
+            android:layout_marginStart="260dp"
             android:layout_marginTop="6dp"
             android:background="@color/biru_2"
             android:fontFamily="@font/poppins"
@@ -60,12 +60,11 @@
         </TextView>
 
         <View
-            android:layout_width="88dp"
-            android:layout_height="80dp"
-            android:background="#F2F2F2"
+            android:layout_width="95dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="264dp"
             android:layout_marginTop="35dp"
-            android:layout_marginStart="262dp"
-            >
+            android:background="#F2F2F2">
 
         </View>
 
@@ -73,8 +72,8 @@
             android:id="@+id/btncekHasil"
             android:layout_width="81dp"
             android:layout_height="49dp"
-            android:layout_marginStart="265dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="269dp"
+            android:layout_marginTop="60dp"
             android:fontFamily="@font/poppins"
             android:gravity="center"
             android:text="Cek Hasil Konsultasi"
@@ -87,10 +86,10 @@
 
         <TextView
             android:id="@+id/txtGejala"
-            android:layout_width="240dp"
-            android:layout_height="60dp"
+            android:layout_width="252dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/poppins"
             android:text="Data Konsultasi belum tersedia"
             android:textColor="@color/biru_2"

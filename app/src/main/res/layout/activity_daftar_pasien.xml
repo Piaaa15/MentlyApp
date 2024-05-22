@@ -63,10 +63,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <ImageView
         android:id="@+id/btnBackdaftar"
@@ -96,7 +96,7 @@
 
     <EditText
         android:id="@+id/edtUmur"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
@@ -131,7 +131,7 @@
 
     <EditText
         android:id="@+id/edtJenkel"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_marginBottom="116dp"
         android:background="@drawable/form_input"
@@ -186,7 +186,7 @@
 
     <EditText
         android:id="@+id/edtNamaLengkap"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:background="@drawable/form_input"
         android:ems="10"
@@ -222,7 +222,7 @@
 
     <EditText
         android:id="@+id/edtEmail"
-        android:layout_width="300dp"
+        android:layout_width="325dp"
         android:layout_height="50dp"
         android:layout_marginBottom="116dp"
         android:background="@drawable/form_input"

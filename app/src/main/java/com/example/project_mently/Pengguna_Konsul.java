@@ -130,7 +130,7 @@ public class Pengguna_Konsul extends Fragment {
                 if (countPenyakit1 > 0) {
                     penyakit1 = "Depresi  ";
                     resepObat = "Obat depresi  ";
-                    solusi = "Solusi depresi  ";
+                    solusi = "Berinteraksi, Lakukan Hal yang menyenangkan,konsumsi makanan sehat anti depresi, dapatkan Paparann sinar matahari  ";
                 }
 
                 // Periksa kondisi untuk anxiety
@@ -148,7 +148,7 @@ public class Pengguna_Konsul extends Fragment {
                 }
                 if (countPenyakit2 > 0) {
                     penyakit2 = "Anxiety  ";
-                    resepObat += "Obat anxiety  ";
+                    resepObat += "Selective Serotonin Reuptake Inhibitor(SSRI)";
                     solusi += "Solusi anxiety  ";
                 }
 
@@ -166,9 +166,9 @@ public class Pengguna_Konsul extends Fragment {
                     Gejala += "Sering Kasar  ";
                 }
                 if (countPenyakit3 > 0){
-                    penyakit3 = "ASPD";
-                    resepObat += "Obat ASPD";
-                    solusi += "Solusi ASPD";
+                    penyakit3 = "Antisocial Personality Disorder (ASPD)";
+                    resepObat += "Aripiprazole (abilify) dan Olanzapine (Zyprexa)";
+                    solusi += "Terapi perilaku kognitif (CBT) dan Terapi keluarga";
                 }
                 // Determine stress level
                 if (countPenyakit1 > 1 && countPenyakit2 > 1 && countPenyakit3 > 1) {

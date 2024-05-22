@@ -83,10 +83,10 @@
 
     <ImageView
         android:id="@+id/btnInformasiAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="235dp"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="230dp"
         android:layout_toEndOf="@+id/informasiPribadi"
         android:src="@drawable/icon2" />
 
@@ -125,11 +125,11 @@
 
     <ImageView
         android:id="@+id/btnBantuanAdmin"
-        android:layout_width="19dp"
-        android:layout_height="wrap_content"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
         android:layout_below="@+id/btnInformasiAdmin"
-        android:layout_marginStart="217dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginStart="229dp"
+        android:layout_marginTop="78dp"
         android:layout_toEndOf="@+id/bantuan"
         android:src="@drawable/icon2" />
 
@@ -137,8 +137,8 @@
         android:id="@+id/btnKeluar"
         android:layout_width="351dp"
         android:layout_height="45dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="680dp"
         android:background="@drawable/btnkeluar"
         android:textColor="@color/biru_2" />
 
@@ -161,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="608dp"
+        android:layout_marginTop="688dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Keluar"
         android:textColor="@color/biru_2"

@@ -28,7 +28,7 @@ public class ActivityBantuan extends AppCompatActivity {
         });
         btnWhatsapp = findViewById(R.id.btnWa);
         btnWhatsapp.setOnClickListener(v -> {
-            String phoneNumber = "6282115558574"; // Nomor telepon WhatsApp
+            String phoneNumber = "628884287484"; // Nomor telepon WhatsApp
 
             // Membuat Intent untuk membuka WhatsApp dengan nomor telepon yang ditentukan
             Intent intent = new Intent(Intent.ACTION_VIEW);
