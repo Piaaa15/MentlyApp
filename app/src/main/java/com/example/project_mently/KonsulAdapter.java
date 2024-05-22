@@ -44,7 +44,9 @@ public class KonsulAdapter extends RecyclerView.Adapter<KonsulAdapter.KonsulView
         String formattedDate = formatDateString(konsul.getTanggal());
         holder.txtTanggal.setText(formattedDate);
         holder.txtGejala.setText(konsul.getGejala());
-        holder.nomorKonsul.setText("Konsultasi " + (position + 1));
+
+        // Nomor konsultasi secara descending
+        holder.nomorKonsul.setText("Konsultasi " + (getItemCount() - position)); //holder.nomorKonsul.setText("Konsultasi " + (position + 1));
 
         holder.cekHasil.setOnClickListener(new View.OnClickListener() {
             @Override

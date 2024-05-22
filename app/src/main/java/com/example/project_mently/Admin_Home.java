@@ -17,9 +17,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
+import kodeJava.Konsul;
 import kodeJava.Pasien;
 
 public class Admin_Home extends Fragment {
@@ -74,6 +80,20 @@ public class Admin_Home extends Fragment {
                     Pasien pasien = postSnapshot.getValue(Pasien.class);
                     mPasienList.add(pasien);
                 }
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Collections.sort(mPasienList, new Comparator<Pasien>() {
+                    @Override
+                    public int compare(Pasien k1, Pasien k2) {
+                        try {
+                            Date date1 = dateFormat.parse(k1.getTanggalDibuat());
+                            Date date2 = dateFormat.parse(k2.getTanggalDibuat());
+                            return date2.compareTo(date1);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        return 0;
+                    }
+                });
                 mAdapter.notifyDataSetChanged();
             }
 

@@ -18,7 +18,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import kodeJava.Konsul;
@@ -85,14 +90,10 @@ public class Admin_Riwayat extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerViewRiwayat);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
         konsulList = new ArrayList<>();
         adapter = new RiwayatAdapter(konsulList, getContext());
         recyclerView.setAdapter(adapter);
-
         fetchKonsulData();
-
-
     }
     private void fetchKonsulData() {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Konsul");
@@ -104,9 +105,22 @@ public class Admin_Riwayat extends Fragment {
                     Konsul konsul = snapshot.getValue(Konsul.class);
                     konsulList.add(konsul);
                 }
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Collections.sort(konsulList, new Comparator<Konsul>() {
+                    @Override
+                    public int compare(Konsul k1, Konsul k2) {
+                        try {
+                            Date date1 = dateFormat.parse(k1.getTanggal());
+                            Date date2 = dateFormat.parse(k2.getTanggal());
+                            return date2.compareTo(date1);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        return 0;
+                    }
+                });
                 adapter.notifyDataSetChanged();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Handle possible errors.

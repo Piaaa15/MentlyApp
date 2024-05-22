@@ -48,7 +48,7 @@ public class PasienAdapter extends RecyclerView.Adapter<PasienAdapter.PasienView
         Pasien currentPasien = mPasienList.get(position);
         holder.txtNamaPasien.setText(currentPasien.getNama());
         holder.txtJenkelPasien.setText(currentPasien.getJenkel());
-        holder.txtUmurPasien.setText(currentPasien.getUmur());
+        holder.txtUmurPasien.setText(currentPasien.getUmur() + " tahun");
 
         String formattedDate = formatDateString(currentPasien.getTanggalDibuat());
         holder.txtPasienAt.setText(formattedDate);

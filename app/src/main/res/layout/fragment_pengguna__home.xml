@@ -157,7 +157,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="459dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -165,7 +165,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="230dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="70dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -174,32 +175,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="70dp">
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="700dp"
-                    android:background="@color/white"
-
-                    >
-
-                </View>
-
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="70dp"/>
             </RelativeLayout>
-
         </ScrollView>
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
 
 

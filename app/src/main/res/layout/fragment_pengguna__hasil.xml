@@ -51,7 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="107dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Riwayat Hasil Konsultasi Anda"
         android:textColor="@color/black"
@@ -59,7 +59,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="459dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -67,7 +67,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="70dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -76,30 +77,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="70dp">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewHasil"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="1600dp"
-                    android:background="@color/white"
-                    >
-                </View>
-
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="70dp"/>
             </RelativeLayout>
-
-
-
         </ScrollView>
     </LinearLayout>
-
-
 </RelativeLayout>
 
 

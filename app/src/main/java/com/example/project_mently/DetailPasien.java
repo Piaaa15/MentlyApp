@@ -73,7 +73,7 @@ public class DetailPasien extends AppCompatActivity {
                         if (pasien != null) {
                             txtNamaPasien.setText(pasien.getNama());
                             txtJenkelPasien.setText(pasien.getJenkel());
-                            txtUmurPasien.setText(pasien.getUmur());
+                            txtUmurPasien.setText(pasien.getUmur() + " tahun");
                             String formattedDate = formatDateString(pasien.getTanggalDibuat());
                             txtPasienAt.setText(formattedDate);
                         }

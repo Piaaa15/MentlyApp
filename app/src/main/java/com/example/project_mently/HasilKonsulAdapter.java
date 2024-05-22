@@ -51,7 +51,6 @@ public class HasilKonsulAdapter extends RecyclerView.Adapter<HasilKonsulAdapter.
         holder.penyakitTextView.setText(hasilKonsul.getPenyakit());
         holder.resepObatTextView.setText(hasilKonsul.getResepObat());
         holder.solusiTextView.setText(hasilKonsul.getSolusi());
-
         // Cek tingkat stres
         String tingkatStress = hasilKonsul.getTingkatStress();
 
@@ -76,7 +75,6 @@ public class HasilKonsulAdapter extends RecyclerView.Adapter<HasilKonsulAdapter.
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return hasilKonsulList.size();
