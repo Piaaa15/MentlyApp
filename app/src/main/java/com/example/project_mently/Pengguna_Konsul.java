@@ -128,9 +128,9 @@ public class Pengguna_Konsul extends Fragment {
                     countPenyakit1++;
                     Gejala += "Merasa Gagal  ";}
                 if (countPenyakit1 > 0) {
-                    penyakit1 = "Depresi  ";
-                    resepObat = "Obat depresi  ";
-                    solusi = "Berinteraksi, Lakukan Hal yang menyenangkan,konsumsi makanan sehat anti depresi, dapatkan Paparann sinar matahari  ";
+                    penyakit1 = "Depresi";
+                    resepObat = "Antidepresan, Ansiolitik, dan Antipsikotik ";
+                    solusi = "Berinteraksi, Lakukan Hal yang menyenangkan,konsumsi makanan sehat.  ";
                 }
 
                 // Periksa kondisi untuk anxiety
@@ -147,9 +147,9 @@ public class Pengguna_Konsul extends Fragment {
                     Gejala += "Khawatir  ";
                 }
                 if (countPenyakit2 > 0) {
-                    penyakit2 = "Anxiety  ";
-                    resepObat += "Selective Serotonin Reuptake Inhibitor(SSRI)";
-                    solusi += "Solusi anxiety  ";
+                    penyakit2 = "Anxiety Disorder";
+                    resepObat += "Benzodiazepine, anti depresan, dan beta blocker";
+                    solusi += "Atur pernafasan,mengonsumsi makanan yang sehat,olahraga, fokus serta beri waktu untuk diri sendiri. ";
                 }
 
                 // Periksa kondisi untuk ASPD
@@ -168,7 +168,7 @@ public class Pengguna_Konsul extends Fragment {
                 if (countPenyakit3 > 0){
                     penyakit3 = "Antisocial Personality Disorder (ASPD)";
                     resepObat += "Aripiprazole (abilify) dan Olanzapine (Zyprexa)";
-                    solusi += "Terapi perilaku kognitif (CBT) dan Terapi keluarga";
+                    solusi += "Terapi perilaku kognitif (CBT) dan Terapi keluarga.";
                 }
                 // Determine stress level
                 if (countPenyakit1 > 1 && countPenyakit2 > 1 && countPenyakit3 > 1) {
